@@ -1,0 +1,235 @@
+html
+{
+    --green:#68e97e;
+    --green2:#25ab3c;
+    --white:white;
+    font-family: "Arial";
+    font-weight: 600;
+    font-size: 0.9em;
+    background-color: var(--white);
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    font-size: 110%;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+main>h2
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9em;
+}
+main>h3
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9em;
+}
+main>a
+{
+    border: none;
+    background: var(--green);
+    padding: 0.5em;
+    width: 70%;
+    text-align: center;
+    border-radius: 0.6em;
+}
+main>a:hover
+{
+    border: none;
+    background: var(--green2);
+    color: var(--white);
+    padding: 0.5em;
+    width: 70%;
+    text-align: center;
+    border-radius: 0.6em;
+}
+h2
+{
+    font-size: 0.9em;
+    margin: 0.8em;
+}
+a
+{
+    text-decoration: inherit;
+    color:inherit;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+}
+.none
+{
+    display: none;
+}
+#right_shop_pannel
+{
+    box-shadow: -6px 0px 6px -6px rgb(0,0,0,0.2);
+    width: 20%;
+    right: 0;
+}
+ul
+{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 0.5em;
+    padding: 0.5em;
+    margin: 0.5em;
+    height: auto;
+}
+@media (max-width: 13em) {
+    ul>li {
+      flex-direction: column;
+      align-items: center;
+    }
+    ul>li>div>div
+    {
+        flex-direction: column;
+    }
+    ul>li>div
+    {
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    ul>li>div>div
+    {
+        align-items: center;
+        justify-content: space-between;
+    }
+    ul>li>a
+    {
+        border-top: 2px solid rgb(0,0,0,0.1);
+        margin-top:6px;
+    }
+}
+@media (min-width: 13em) {
+    ul>li {
+      flex-direction: row;
+    }
+    ul>li>div>div
+    {
+        flex-direction: row;
+    }
+    ul>li>div
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+    ul>li>a
+    {
+        border-left: 2px solid rgb(0,0,0,0.1);
+        margin-left:6px;
+    }
+}
+ul>li
+{
+    box-shadow: 0px 0px 3px rgb(0,0,0,0.2);
+    display: flex;
+    background: var(--white);
+    margin: 0.2em;
+    flex-grow: 2;
+    padding: 0.5em;
+    font-size:1.3em;
+}
+ul>li>div
+{
+    display: flex;
+    width: 100%;
+}
+ul>li>div>div
+{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 100%;
+}
+ul>li svg
+{
+    --svg-color:silver;
+    display: block;
+    transition-duration: 0.5s;
+    width:100%;
+    height: 100%;
+    cursor: pointer;
+}
+ul>li a:hover svg
+{
+    --svg-color:var(--green);
+}
+ul>li>div>div>div:last-child
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items:flex-end;
+    align-self: flex-end;
+}
+ul>li>div>div>div:last-child>a
+{
+    font-weight: bolder;
+    display: block;
+    width:1.2em;
+    height:1.2em;
+    padding: 0;
+    border-radius: 0.3em;
+    text-align: center;
+}
+ul>li>div>div>div>div
+{
+    width: 2em;
+    text-align: center;
+}
+ul>li img
+{
+    width: 40%;
+    height: 40%;
+    margin-right: 0.2em;
+}
+ul>li>a
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    margin-right: 0.2em;
+    padding: 0.3em;
+}
+a>svg
+{
+    --svg-color:black !important;
+}
+a:hover>svg
+{
+    --svg-color:var(--green) !important;
+}
+a:hover>svg.red
+{
+    --svg-color:red !important;
+}
+.rating>span:first-child
+{
+    color: rgb(255,200,0);
+}
+.rating>span:last-child
+{
+    color: rgb(255,230,210);
+}
+.price
+{
+    font-weight:bold;
+}
+.price:after
+{
+    content: attr(--currency);
+}
